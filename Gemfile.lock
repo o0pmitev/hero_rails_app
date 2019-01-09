@@ -57,6 +57,8 @@ GEM
     debug_inspector (0.0.3)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.9.1)
+      i18n (>= 0.7)
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -163,6 +165,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.4)
   byebug
   coffee-rails (~> 4.1.0)
+  faker (~> 1.9, >= 1.9.1)
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.5)

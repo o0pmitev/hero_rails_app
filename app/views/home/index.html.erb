@@ -1,9 +1,47 @@
+<br />
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title"><%= link_to 'Click Here To Generate A New Superhero', root_path %></h3>
+    <h3 class="panel-title gray"><%= link_to 'Click Here To Generate A New Superhero', root_path %></h3>
   </div>
+  
   <div class="panel-body">
-    Panel content
+    <div class="row">
+      <br />
+      <div class="col-md-4">
+        <img src ="<%= @avatar %>"> 
+        <br /><br />
+      </div>
+      
+    <div class="coll-md-4">
+      <h3>
+        Your Superhero Name:<br /> 
+        <span class="red"><%= @hero_prefix + ' ' + @hero_name %></span>
+      </h3>
+      
+      <h3>
+        Your Superhero Power:<br />
+        <span class="red"><%= @hero_power %></span>
+      </h3><br /><br />    
+      
+      <h4>
+        You are :<br />
+        <span class="trans_red"><%= @origins %></span>
+      <br />
+      </h4>
+      
+      <h4>
+        Your Corporate Superpower is :<br />
+        <span class="trans_red"><%= @corp_power %></span>
+      </h4>
+    </div>
+    
+    <div class="col-md-4">
+      <!-- put add code -->
+    </div>
+    
+    
+    </div><!-- /row -->
+    
   </div>
   <div class="panel-footer"><%= link_to 'Create A Whole Superhero Team', home_team_path %></div>
 </div>
