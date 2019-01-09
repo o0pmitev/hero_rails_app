@@ -1,0 +1,63 @@
+
+
+
+<% @team_number.times do %>
+
+    <div class="row">
+      <br />
+      <div class="col-md-4">
+         <% ran_num = rand(1..1000) %>
+         <% set_num = rand(1..2) %>
+         <% bg = rand(1..2) %>
+          <% if set_num == 1 %>
+            <% set = "set1" %>
+           <% else %>
+             <% set = "set2" %>
+           <% end %>
+    
+          <% if bg == 1 %>
+             <% back = "bg1" %>
+          <% else %>
+           <% back = "bg2" %>
+          <% end %>
+        <% avatar = Faker::Avatar.image(ran_num, "300x300", "png", set, back) %>
+
+        <img src ="<%= avatar %>"> 
+        <br /><br />
+      </div>
+      
+    <div class="coll-md-4">
+      <h3>
+        Your Superhero Name:<br /> 
+        <span class="red"><%= Faker::Superhero.prefix + ' ' + Faker::Superhero.name %></span>
+      </h3>
+      
+      <h3>
+        Your Superhero Power:<br />
+        <span class="red"><%= Faker::Superhero.power %></span>
+      </h3><br /><br />    
+      
+      <h4>
+        Nationality :<br />
+        <span class="trans_red"><%= Faker::Nation.nationality %></span>
+      <br />
+      </h4>
+      
+      <h4>
+        Your Corporate Superpower is :<br />
+        <span class="trans_red"><%= Faker::Company.bs.titleize %></span>
+      </h4>
+    </div>
+    
+    <div class="col-md-4">
+      <!-- put add code -->
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+        </div>
+    </div>
+    
+    </div><!-- /row -->
+    
+<% end %>

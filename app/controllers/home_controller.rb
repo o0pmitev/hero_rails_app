@@ -27,7 +27,6 @@ class HomeController < ApplicationController
     else 
       @back = "bg2"
     end
-
     @avatar = Faker::Avatar.image(@ran_num, "300x300", "png", @set, @back)
   end
   
@@ -36,6 +35,7 @@ class HomeController < ApplicationController
   end
   
   def team
+    @team_number = params[:team_number].to_i
   end
   
   

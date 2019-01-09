@@ -1,9 +1,18 @@
+
+<br />
+
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title"><%= link_to 'Click Here To Generate A New Superhero', root_path %></h3>
+    <h3 class="panel-title gray"><% if @team_number > 0 %>Your Superhero Team...<% else %>How Many Team Members Do You Want?<% end %></h3>
   </div>
   <div class="panel-body">
-    <%= @name %>
+    
+<% if @team_number > 0 %>
+  <%= render 'home/show_team' %>
+<% else %>
+  <%= render 'home/create_team' %>
+<% end %>
+
   </div>
   <div class="panel-footer"><%= link_to 'Create A Whole Superhero Team', home_team_path %></div>
 </div>
